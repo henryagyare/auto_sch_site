@@ -78,7 +78,7 @@ Responsible for:
 - flagging major scope or architecture conflicts
 - maintaining tasks.json
 - ensure that no task is assigned to the Fullstack Agent until its dependencies are marked as completed
-    
+
 ### Fullstack Agent
 Responsible for:
 - building pages and UI components
@@ -200,7 +200,13 @@ If the conflict is minor, proceed with the documented MVP approach and mention t
 
 ---
 
-## 11. Definition of Done
+## 11. Additional Rules
+- only the Lead/Planning agent should be allowed to change task status, dependencies, priority, or acceptance criteria
+- implementation agents can propose task updates, but should not silently rewrite scope in a way that changes product direction
+
+---
+
+## 12. Definition of Done
 A task is considered done only when:
 - the implementation matches the requested scope
 - the change aligns with `PRODUCT_SPEC.md` and `ARCHITECTURE.md`
