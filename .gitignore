@@ -33,6 +33,7 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 *.env.example
+.env.local
 
 # vercel
 .vercel
@@ -43,5 +44,4 @@ next-env.d.ts
 
 
 placeholder_image_resize_as_needed.jpg
-*.env
-node_modules
+.next
