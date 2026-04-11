@@ -214,3 +214,17 @@ A task is considered done only when:
 - validation commands have been run
 - the code is readable and maintainable
 - the PR includes a clear summary and any important notes
+
+---
+
+## 13. Task File Rules
+- `tasks.json` must always conform to `tasks.schema.json`
+- only the Lead agent may change:
+  - task status
+  - task dependencies
+  - task priority
+  - acceptance criteria
+- implementation agents may propose updates, but may not silently change scope
+- no task may be assigned to the Fullstack agent unless all dependencies are marked `done`
+- blocked tasks must include `blocked_reason`
+- new tasks must reference a valid `parent_backlog_id` when mapped to the roadmap

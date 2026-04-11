@@ -1,0 +1,744 @@
+[
+  {
+    "id": "TASK-001",
+    "title": "Initialize Next.js project foundation",
+    "description": "Set up the base Next.js App Router project with Tailwind CSS, shared layout, and a clean folder structure for public and admin routes.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [],
+    "scope": "foundation",
+    "acceptance_criteria": [
+      "Next.js App Router project is initialized",
+      "Tailwind CSS is configured",
+      "A global layout exists",
+      "Base folders for app, components, lib, and admin routes are created",
+      "Project starts locally without errors"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**",
+      "styles/**",
+      "package.json",
+      "package-lock.json",
+      "tailwind.config.*",
+      "postcss.config.*",
+      "tsconfig.json",
+      "next.config.*"
+    ],
+    "notes": "Do not add unnecessary dependencies."
+  },
+  {
+    "id": "TASK-002",
+    "title": "Configure Supabase integration",
+    "description": "Connect the app to Supabase and create reusable helpers for server-side and client-side usage.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-001"
+    ],
+    "scope": "foundation",
+    "acceptance_criteria": [
+      "Supabase environment variables are documented",
+      "Shared Supabase helper utilities are created",
+      "Server-side and client-side access patterns are defined",
+      "Local development can connect successfully"
+    ],
+    "files_allowed": [
+      "lib/**",
+      ".env.example",
+      "README.md",
+      "package.json",
+      "package-lock.json"
+    ],
+    "notes": "Never hardcode secrets."
+  },
+  {
+    "id": "TASK-003",
+    "title": "Create initial database schema",
+    "description": "Create the initial schema for site settings, news posts, events, staff members, resources, contact submissions, and admissions inquiries.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "database",
+    "dependencies": [
+      "TASK-002"
+    ],
+    "scope": "database",
+    "acceptance_criteria": [
+      "Core MVP tables are created",
+      "Primary keys and timestamps are included",
+      "Basic relationships are defined where needed",
+      "Schema aligns with MVP scope only",
+      "Schema changes are documented"
+    ],
+    "files_allowed": [
+      "supabase/**",
+      "db/**",
+      "types/**",
+      "README.md"
+    ],
+    "notes": "Do not add gradebook, payments, or attendance tables."
+  },
+  {
+    "id": "TASK-004",
+    "title": "Add database security and RLS policies",
+    "description": "Implement Row Level Security and initial access rules for admin-managed content and protected data tables.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "database",
+    "dependencies": [
+      "TASK-003"
+    ],
+    "scope": "security",
+    "acceptance_criteria": [
+      "RLS is enabled on protected tables",
+      "Policies are defined for admin and superadmin access",
+      "Public read access is limited to intended public content only",
+      "Protected tables are not writable by guests"
+    ],
+    "files_allowed": [
+      "supabase/**",
+      "db/**",
+      "README.md"
+    ],
+    "notes": "Favor least-privilege access."
+  },
+  {
+    "id": "TASK-005",
+    "title": "Build shared UI shell",
+    "description": "Create the global navbar, footer, page container, and shared section layout components for the site.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-001"
+    ],
+    "scope": "ui",
+    "acceptance_criteria": [
+      "Navbar is responsive",
+      "Footer is responsive",
+      "Shared layout patterns are reusable",
+      "Navigation structure matches MVP pages",
+      "Design is mobile-first"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "styles/**"
+    ],
+    "notes": "Use consistent spacing and reusable components."
+  },
+  {
+    "id": "TASK-006",
+    "title": "Build homepage MVP",
+    "description": "Create the homepage with hero section, mission statement, quick links, featured news/events preview, and calls to action.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Hero section is implemented",
+      "Mission statement is visible",
+      "Quick links section is included",
+      "Featured news/events preview is included",
+      "Page is responsive and visually polished"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Use placeholder content where needed."
+  },
+  {
+    "id": "TASK-007",
+    "title": "Build About Us page",
+    "description": "Create the About Us page with mission, vision, history, and leadership sections.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Mission section exists",
+      "Vision section exists",
+      "History section exists",
+      "Leadership section exists",
+      "Page is responsive"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Professional school-appropriate presentation."
+  },
+  {
+    "id": "TASK-008",
+    "title": "Build Admissions page",
+    "description": "Create the Admissions page with application overview, tuition/fees section, FAQs, and inquiry/tour CTA.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Application steps are shown",
+      "Tuition/fees section exists",
+      "FAQ section exists",
+      "Inquiry or tour CTA is clearly visible"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Do not include payments."
+  },
+  {
+    "id": "TASK-009",
+    "title": "Build Academics page",
+    "description": "Create the Academics page with curriculum overview and school-level breakdown for nursery through senior high.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Curriculum overview exists",
+      "Grade-level breakdown is included",
+      "Department/division sections are clearly organized",
+      "Page is responsive"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Keep structure simple and readable."
+  },
+  {
+    "id": "TASK-010",
+    "title": "Build Contact Us page",
+    "description": "Create the Contact Us page with school contact details, location, and inquiry form UI.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Contact information is displayed",
+      "School address/location section exists",
+      "Inquiry form UI is present",
+      "Page is responsive"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Submission wiring happens in a later task."
+  },
+  {
+    "id": "TASK-011",
+    "title": "Build News & Events page shell",
+    "description": "Create the public News & Events page structure with placeholder cards and filtering layout if needed.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "News/events listing layout exists",
+      "Cards or list items are reusable",
+      "Page is responsive",
+      "Structure supports future dynamic content"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Use static placeholders initially."
+  },
+  {
+    "id": "TASK-012",
+    "title": "Build Parent Resources page",
+    "description": "Create a parent resource hub for menus, handbook links, forms, and other helpful school resources.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Parent resource sections are clearly organized",
+      "Placeholder resource cards or links are included",
+      "Page is responsive",
+      "Design is easy to scan on mobile"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "This is not a full parent portal."
+  },
+  {
+    "id": "TASK-013",
+    "title": "Build Staff Directory page shell",
+    "description": "Create the Staff Directory page structure with placeholder staff cards and space for contact details.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Staff listing layout exists",
+      "Staff cards are reusable",
+      "Page is responsive",
+      "Structure supports future dynamic data"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Search/filter can come later if needed."
+  },
+  {
+    "id": "TASK-014",
+    "title": "Build Policies & Safeguarding page",
+    "description": "Create a page for school policies, privacy notice, safeguarding content, and important compliance documents.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-005"
+    ],
+    "scope": "public-page",
+    "acceptance_criteria": [
+      "Policies are grouped clearly",
+      "Safeguarding section exists",
+      "Downloadable or linked resources can be displayed",
+      "Page is responsive"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Use placeholder documents or links if needed."
+  },
+  {
+    "id": "TASK-015",
+    "title": "Implement contact form submission flow",
+    "description": "Connect the contact form to server-side validation and persist submissions to the database.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-005",
+      "TASK-010"
+    ],
+    "scope": "forms",
+    "acceptance_criteria": [
+      "Required fields are validated",
+      "Submission is processed securely server-side",
+      "Record is stored in the database",
+      "Success state is shown",
+      "Error state is handled gracefully"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Avoid client-only sensitive logic."
+  },
+  {
+    "id": "TASK-016",
+    "title": "Implement admissions inquiry and tour request flow",
+    "description": "Create the admissions inquiry workflow and optional tour request submission with secure server-side handling.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-008"
+    ],
+    "scope": "forms",
+    "acceptance_criteria": [
+      "Admissions inquiry form exists",
+      "Tour request fields are handled if included",
+      "Submission is validated server-side",
+      "Data is stored successfully",
+      "User receives success or error feedback"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Keep the form simple for MVP."
+  },
+  {
+    "id": "TASK-017",
+    "title": "Set up admin authentication and protected routes",
+    "description": "Implement admin and superadmin login flow with protected dashboard routes.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-002",
+      "TASK-004"
+    ],
+    "scope": "auth",
+    "acceptance_criteria": [
+      "Admin login works",
+      "Protected routes redirect unauthenticated users",
+      "Admin-only content is not visible to guests",
+      "Role checks support admin and superadmin"
+    ],
+    "files_allowed": [
+      "app/**",
+      "lib/**",
+      "middleware.*",
+      "components/**"
+    ],
+    "notes": "MVP roles are guest, admin, and superadmin."
+  },
+  {
+    "id": "TASK-018",
+    "title": "Build admin dashboard shell",
+    "description": "Create the core admin dashboard layout, navigation, and section placeholders for content management.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-017"
+    ],
+    "scope": "admin",
+    "acceptance_criteria": [
+      "Admin dashboard layout exists",
+      "Navigation for core content areas exists",
+      "Dashboard routes are protected",
+      "Dashboard is responsive and usable"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Keep the admin UI simple and maintainable."
+  },
+  {
+    "id": "TASK-019",
+    "title": "Build news management admin feature",
+    "description": "Allow admins to create, edit, publish, and remove news posts from the dashboard.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-017",
+      "TASK-018"
+    ],
+    "scope": "admin",
+    "acceptance_criteria": [
+      "Admins can create news posts",
+      "Admins can edit existing news posts",
+      "Admins can publish or unpublish posts",
+      "Changes persist to the database",
+      "UI handles validation and errors"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Keep the content model structured."
+  },
+  {
+    "id": "TASK-020",
+    "title": "Build event management admin feature",
+    "description": "Allow admins to create, edit, and manage school events from the dashboard.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-017",
+      "TASK-018"
+    ],
+    "scope": "admin",
+    "acceptance_criteria": [
+      "Admins can create events",
+      "Admins can edit existing events",
+      "Event data persists to the database",
+      "Validation is applied to required fields",
+      "UI handles success and error states"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Support title, date, time, location, and description."
+  },
+  {
+    "id": "TASK-021",
+    "title": "Build staff management admin feature",
+    "description": "Allow admins to create and update staff directory entries from the dashboard.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-017",
+      "TASK-018"
+    ],
+    "scope": "admin",
+    "acceptance_criteria": [
+      "Admins can add staff entries",
+      "Admins can edit staff entries",
+      "Data persists to the database",
+      "Directory fields are validated",
+      "UI handles errors cleanly"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Include role/title and optional contact info."
+  },
+  {
+    "id": "TASK-022",
+    "title": "Render dynamic news and events on public pages",
+    "description": "Replace placeholder content with real news and event data on the homepage and news/events page.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-019",
+      "TASK-020",
+      "TASK-006",
+      "TASK-011"
+    ],
+    "scope": "integration",
+    "acceptance_criteria": [
+      "Homepage reads featured news/events from the database",
+      "News & Events page reads dynamic content from the database",
+      "No-data states are handled gracefully",
+      "Content renders correctly on server-side pages"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Prefer server-side data fetching."
+  },
+  {
+    "id": "TASK-023",
+    "title": "Render dynamic staff directory",
+    "description": "Replace placeholder staff cards with real staff data from the database.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-021",
+      "TASK-013"
+    ],
+    "scope": "integration",
+    "acceptance_criteria": [
+      "Staff directory reads from the database",
+      "No-data states are supported",
+      "Public rendering is responsive and readable",
+      "Displayed fields match approved schema"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Keep fields aligned with admin-managed content."
+  },
+  {
+    "id": "TASK-024",
+    "title": "Build homepage and site settings management",
+    "description": "Allow admins to manage selected homepage content and global site settings.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-017",
+      "TASK-018",
+      "TASK-006"
+    ],
+    "scope": "admin",
+    "acceptance_criteria": [
+      "Admins can update selected homepage content",
+      "Admins can update global site settings such as contact details",
+      "Changes persist to the database",
+      "Public pages reflect updated content correctly"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Keep editable content scoped and structured."
+  },
+  {
+    "id": "TASK-025",
+    "title": "Build resources management and rendering",
+    "description": "Allow admins to manage downloadable resources and render them on the Parent Resources and Policies pages.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-003",
+      "TASK-017",
+      "TASK-018",
+      "TASK-012",
+      "TASK-014"
+    ],
+    "scope": "admin-integration",
+    "acceptance_criteria": [
+      "Admins can create and update resource entries",
+      "Resources render on the correct public pages",
+      "Links or files are stored correctly",
+      "No-data states are handled"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "lib/**"
+    ],
+    "notes": "Storage integration can be simple in MVP."
+  },
+  {
+    "id": "TASK-026",
+    "title": "Add SEO foundations",
+    "description": "Add page titles, descriptions, social metadata, and other foundational SEO improvements across the public site.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-006",
+      "TASK-007",
+      "TASK-008",
+      "TASK-009",
+      "TASK-010",
+      "TASK-011",
+      "TASK-012",
+      "TASK-013",
+      "TASK-014"
+    ],
+    "scope": "quality",
+    "acceptance_criteria": [
+      "Public pages have meaningful titles",
+      "Public pages have descriptions",
+      "Open Graph or equivalent metadata is added where appropriate",
+      "Metadata aligns with school branding"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Keep SEO practical and lightweight."
+  },
+  {
+    "id": "TASK-027",
+    "title": "Perform accessibility and responsive polish pass",
+    "description": "Review and improve mobile responsiveness, keyboard usability, semantic structure, and form accessibility.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-022",
+      "TASK-023",
+      "TASK-025",
+      "TASK-026"
+    ],
+    "scope": "quality",
+    "acceptance_criteria": [
+      "Major pages are usable on mobile screens",
+      "Heading hierarchy is improved",
+      "Forms have labels and accessible states",
+      "Navigation is keyboard-friendly where applicable"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**",
+      "styles/**"
+    ],
+    "notes": "Treat this as a release-quality sweep."
+  },
+  {
+    "id": "TASK-028",
+    "title": "Add loading, empty, and error states",
+    "description": "Improve user experience by handling loading, no-data, and error scenarios across public and admin flows.",
+    "status": "todo",
+    "priority": "medium",
+    "owner": "fullstack",
+    "dependencies": [
+      "TASK-022",
+      "TASK-023",
+      "TASK-025"
+    ],
+    "scope": "quality",
+    "acceptance_criteria": [
+      "Dynamic pages handle missing data gracefully",
+      "Admin flows display meaningful success/error feedback",
+      "Loading states exist where needed",
+      "User-facing messages are clear and professional"
+    ],
+    "files_allowed": [
+      "app/**",
+      "components/**"
+    ],
+    "notes": "Do not leave broken blank states."
+  },
+  {
+    "id": "TASK-029",
+    "title": "Prepare deployment and production readiness",
+    "description": "Finalize environment configuration, confirm build stability, and prepare the project for deployment.",
+    "status": "todo",
+    "priority": "high",
+    "owner": "lead",
+    "dependencies": [
+      "TASK-027",
+      "TASK-028"
+    ],
+    "scope": "release",
+    "acceptance_criteria": [
+      "Environment variables are documented",
+      "Project builds cleanly",
+      "Core user flows are smoke-tested",
+      "Deployment checklist is completed"
+    ],
+    "files_allowed": [
+      "README.md",
+      ".env.example",
+      "app/**",
+      "lib/**",
+      "package.json",
+      "package-lock.json",
+      "next.config.*"
+    ],
+    "notes": "This is the final MVP readiness check."
+  }
+]
