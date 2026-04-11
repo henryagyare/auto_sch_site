@@ -76,7 +76,9 @@ Responsible for:
 - checking whether requests are in scope
 - ensuring work aligns with MVP priorities
 - flagging major scope or architecture conflicts
-
+- maintaining tasks.json
+- ensure that no task is assigned to the Fullstack Agent until its dependencies are marked as completed
+    
 ### Fullstack Agent
 Responsible for:
 - building pages and UI components
