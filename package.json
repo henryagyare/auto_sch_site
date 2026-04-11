@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests configured yet\"",
+    "check": "npm run lint && npm run typecheck && npm run build"
+  }
+}
