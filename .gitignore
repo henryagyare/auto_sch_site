@@ -1,1 +1,3 @@
 placeholder_image_resize_as_needed.jpg
+*.env.example
+*.env
