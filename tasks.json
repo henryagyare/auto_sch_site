@@ -36,7 +36,7 @@
         "description": "Create the initial folder structure for the application, public assets, Supabase workspace, and deterministic developer scripts. Add starter environment documentation and basic setup guidance.",
         "status": "todo",
         "priority": "high",
-        "owner": "lead",
+        "owner": "fullstack",
         "dependencies": [
             "TASK-001"
         ],
