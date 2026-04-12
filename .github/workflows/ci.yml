@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - "feature/**"
+      - "fix/**"
+      - "chore/**"
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: ./scripts/lint.sh
+
+      - name: Run typecheck
+        run: ./scripts/typecheck.sh
+
+      - name: Run tests
+        run: ./scripts/test.sh
+
+      - name: Run build
+        run: ./scripts/build.sh
+
+      - name: Run security checks
+        run: ./scripts/security.sh
