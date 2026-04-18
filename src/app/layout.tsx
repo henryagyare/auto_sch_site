@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import PageContainer from "@/components/PageContainer";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Action Academy | Excellence in Education",
@@ -14,15 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="p-6 border-b bg-white">
-          <div className="max-w-7xl mx-auto font-bold text-xl tracking-tight">
-            ACTION ACADEMY
-          </div>
-        </nav>
-        <main>{children}</main>
-        <footer className="p-10 border-t mt-20 text-center text-gray-500 text-sm">
-          © 2026 Action Academy. All rights reserved.
-        </footer>
+        <PageContainer>
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+        </PageContainer>
       </body>
     </html>
   );
