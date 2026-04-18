@@ -45,3 +45,8 @@ next-env.d.ts
 
 placeholder_image_resize_as_needed.jpg
 .next
+
+# Supabase
+supabase/.temp/
+supabase/.branches/
+.supabase/
