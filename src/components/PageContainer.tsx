@@ -1,13 +1,13 @@
 export default function PageContainer({
   children,
+  className = "",
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        {children}
-      </div>
+    <div className={`mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
     </div>
   );
 }

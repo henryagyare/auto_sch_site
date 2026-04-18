@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import PageContainer from "@/components/PageContainer";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -16,12 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <PageContainer>
-          <SiteHeader />
-          <main>{children}</main>
-          <SiteFooter />
-        </PageContainer>
+      <body className="min-h-screen bg-white">
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
