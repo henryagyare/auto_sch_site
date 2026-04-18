@@ -65,7 +65,7 @@
         "id": "TASK-003",
         "title": "Configure Supabase integration",
         "description": "Connect the app to Supabase and create reusable helpers for server-side and client-side usage.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -93,7 +93,7 @@
         "id": "TASK-004",
         "title": "Create initial database schema",
         "description": "Create the initial schema for site settings, news posts, events, staff members, resources, contact submissions, and admissions inquiries.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "database",
         "dependencies": [
@@ -118,7 +118,7 @@
         "id": "TASK-005",
         "title": "Add database security and RLS policies",
         "description": "Implement Row Level Security and initial access rules for admin-managed content and protected data tables.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "database",
         "dependencies": [
@@ -141,7 +141,7 @@
         "id": "TASK-006",
         "title": "Build shared UI shell",
         "description": "Create the global navbar, footer, page container, and shared section layout components for the site using a corporate and premium visual direction.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -167,7 +167,7 @@
         "id": "TASK-007",
         "title": "Build homepage MVP",
         "description": "Create the homepage with hero section, mission statement, quick links, featured news and events preview, and calls to action.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
