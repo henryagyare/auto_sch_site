@@ -120,6 +120,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── History ── dark */}
+      <section className="bg-black">
+        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px]">
+              <Image
+                src="/placeholder.jpg"
+                alt="Action Academy history"
+                fill
+                className="object-cover opacity-70"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-black/40 to-transparent" />
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
+                Our Journey
+              </p>
+              <h2 className="mt-3 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
+                A legacy of excellence
+              </h2>
+              <p className="mt-4 text-base leading-[1.67] text-[#a7a7a7]">
+                Founded in 2010, Action Academy began as a small community school with a big vision: to provide world-class education that nurtures both academic achievement and personal growth.
+              </p>
+              <p className="mt-4 text-base leading-[1.67] text-[#a7a7a7]">
+                Over the past decade, we&apos;ve grown from 50 students to over 800, expanded our campus, and built a reputation for innovative teaching and a supportive community. Our graduates attend top universities worldwide and return as alumni who give back to the school that shaped them.
+              </p>
+              <p className="mt-4 text-base leading-[1.67] text-[#a7a7a7]">
+                Today, Action Academy stands as a beacon of educational excellence, continually evolving to meet the needs of the next generation while staying true to our founding principles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Values ── dark */}
       <section className="bg-black">
         <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
