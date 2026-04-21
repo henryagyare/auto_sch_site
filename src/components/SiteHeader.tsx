@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navItems = [
+const navItems: { label: string; href: string; lgOnly?: boolean }[] = [
   { label: "About", href: "/about" },
-  { label: "Admissions", href: "/admissions" },
   { label: "Academics", href: "/academics" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Staff", href: "/staff", lgOnly: true },
+  { label: "Resources", href: "/resources" },
   { label: "News", href: "/news" },
+  { label: "Policies", href: "/policies", lgOnly: true },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -22,10 +25,6 @@ export default function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
 
   return (
     <header
@@ -56,7 +55,7 @@ export default function SiteHeader() {
                   active
                     ? "bg-white/10 text-white"
                     : "text-[#94A3C8] hover:bg-white/5 hover:text-white"
-                }`}
+                } ${item.lgOnly ? "hidden lg:block" : ""}`}
               >
                 {item.label}
               </Link>
@@ -95,6 +94,7 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setMobileOpen(false)}
                 className={`block rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                   active
                     ? "bg-white/10 text-white"
