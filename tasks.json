@@ -3,7 +3,7 @@
         "id": "TASK-001",
         "title": "Initialize Next.js project foundation",
         "description": "Set up the base Next.js App Router project with TypeScript, Tailwind CSS, ESLint, src directory structure, and a clean foundation for public and admin routes.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [],
@@ -34,7 +34,7 @@
         "id": "TASK-002",
         "title": "Scaffold repository structure and developer tooling",
         "description": "Create the initial folder structure for the application, public assets, Supabase workspace, and deterministic developer scripts. Add starter environment documentation and basic setup guidance.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -192,7 +192,7 @@
         "id": "TASK-008",
         "title": "Build About Us page",
         "description": "Create the About Us page with mission, vision, history, and leadership sections.",
-        "status": "todo",
+        "status": "done",
         "priority": "medium",
         "owner": "fullstack",
         "dependencies": [
@@ -216,7 +216,7 @@
         "id": "TASK-009",
         "title": "Build Admissions page",
         "description": "Create the Admissions page with application overview, tuition and fees section, FAQs, and inquiry or tour CTA.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -239,7 +239,7 @@
         "id": "TASK-010",
         "title": "Build Academics page",
         "description": "Create the Academics page with curriculum overview and school-level breakdown for nursery through senior high.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -262,7 +262,7 @@
         "id": "TASK-011",
         "title": "Build Contact Us page",
         "description": "Create the Contact Us page with school contact details, location, and inquiry form UI.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -285,7 +285,7 @@
         "id": "TASK-012",
         "title": "Build News and Events page shell",
         "description": "Create the public News and Events page structure with placeholder cards and reusable list layout.",
-        "status": "todo",
+        "status": "done",
         "priority": "medium",
         "owner": "fullstack",
         "dependencies": [
@@ -308,7 +308,7 @@
         "id": "TASK-013",
         "title": "Build Parent Resources page",
         "description": "Create a parent resource hub for menus, handbook links, forms, and other helpful school resources.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -331,7 +331,7 @@
         "id": "TASK-014",
         "title": "Build Staff Directory page shell",
         "description": "Create the Staff Directory page structure with placeholder staff cards and space for contact details.",
-        "status": "todo",
+        "status": "done",
         "priority": "medium",
         "owner": "fullstack",
         "dependencies": [
@@ -354,7 +354,7 @@
         "id": "TASK-015",
         "title": "Build Policies and Safeguarding page",
         "description": "Create a page for school policies, privacy notice, safeguarding content, and important compliance documents.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -678,7 +678,7 @@
         "id": "TASK-027",
         "title": "Add SEO foundations",
         "description": "Add page titles, descriptions, social metadata, and other foundational SEO improvements across the public site.",
-        "status": "todo",
+        "status": "done",
         "priority": "high",
         "owner": "fullstack",
         "dependencies": [
@@ -703,7 +703,7 @@
             "src/app/**",
             "src/components/**"
         ],
-        "notes": "Keep SEO practical and lightweight."
+        "notes": "Each page exports a metadata object with title and description. OG tags deferred to polish pass."
     },
     {
         "id": "TASK-028",
