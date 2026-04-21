@@ -8,241 +8,106 @@ export const metadata: Metadata = {
     "Explore Action Academy's curriculum, academic programmes, and our approach to learning excellence.",
 };
 
+const HERO_IMG = "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80";
+const STEM_IMG = "https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?auto=format&fit=crop&w=700&q=80";
+const ARTS_IMG = "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=700&q=80";
+const SPORTS_IMG = "https://images.unsplash.com/photo-1571019614099-38bdf27d4bce?auto=format&fit=crop&w=700&q=80";
+const EXTRA_IMG = "https://images.unsplash.com/photo-1527525443983-6e60c75fff46?auto=format&fit=crop&w=900&q=80";
+
 const subjects = [
   { name: "Mathematics", description: "From foundational numeracy to advanced calculus and statistics." },
   { name: "Sciences", description: "Biology, Chemistry, Physics, and integrated STEM programming." },
   { name: "Languages", description: "English Literature, Creative Writing, and modern languages." },
   { name: "Humanities", description: "History, Geography, Social Studies, and critical thinking." },
-  { name: "Arts", description: "Visual arts, music, drama, and design technology." },
+  { name: "Creative Arts", description: "Visual arts, music, drama, and design technology." },
   { name: "Technology", description: "Computer Science, digital literacy, and coding from Grade 1." },
 ];
 
 const programs = [
-  {
-    label: "STEM",
-    title: "Science & Technology",
-    description:
-      "Our STEM programme integrates science, technology, engineering, and mathematics in hands-on, inquiry-based learning experiences.",
-    image: "/placeholder.jpg",
-  },
-  {
-    label: "Arts",
-    title: "Creative Arts",
-    description:
-      "Students explore visual art, music, theatre, and design — building creativity, self-expression, and artistic confidence.",
-    image: "/placeholder.jpg",
-  },
-  {
-    label: "Sports",
-    title: "Physical Education & Sport",
-    description:
-      "A comprehensive sports programme promotes fitness, teamwork, discipline, and a lifelong love of physical activity.",
-    image: "/placeholder.jpg",
-  },
+  { label: "STEM", title: "Science & Technology", description: "Our STEM programme integrates science, technology, engineering, and mathematics in hands-on, inquiry-based learning experiences.", image: STEM_IMG },
+  { label: "Arts", title: "Creative Arts", description: "Students explore visual art, music, theatre, and design — building creativity, self-expression, and artistic confidence.", image: ARTS_IMG },
+  { label: "Sports", title: "Physical Education", description: "A comprehensive sports programme promotes fitness, teamwork, discipline, and a lifelong love of physical activity.", image: SPORTS_IMG },
 ];
 
 const support = [
-  {
-    title: "Academic Tutoring",
-    description: "Individual and small-group support for students who need extra help in core subjects.",
-  },
-  {
-    title: "Learning Enrichment",
-    description: "Extension programmes for students performing above grade level, including competitions and research projects.",
-  },
-  {
-    title: "Counselling Services",
-    description: "Qualified counsellors available to support students' social-emotional wellbeing and academic confidence.",
-  },
-  {
-    title: "Special Needs Support",
-    description: "Inclusive learning plans and specialist support for students with diverse learning needs.",
-  },
+  { title: "Academic Tutoring", description: "Individual and small-group support for students who need extra help in core subjects." },
+  { title: "Learning Enrichment", description: "Extension programmes for high-achieving students, including competitions and research projects." },
+  { title: "Counselling Services", description: "Qualified counsellors supporting students' social-emotional wellbeing and academic confidence." },
+  { title: "Special Needs Support", description: "Inclusive learning plans and specialist support for students with diverse learning needs." },
 ];
 
 export default function AcademicsPage() {
   return (
     <>
-      {/* ── Hero ── dark */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-          <div className="grid min-h-[480px] items-center gap-12 py-20 lg:grid-cols-2">
+      {/* ── Hero ── navy */}
+      <section className="relative overflow-hidden bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid min-h-[520px] items-center gap-12 py-24 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#76b900]">
-                Learning & Growth
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C9922A]">Learning & Growth</p>
+              <h1 className="mt-3 text-5xl font-bold leading-tight text-white sm:text-6xl">Academics</h1>
+              <div className="mt-4 h-1 w-16 rounded bg-[#C9922A]" />
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#94A3C8]">
+                A rigorous, well-rounded curriculum designed to inspire every learner from K through Grade 12.
               </p>
-              <h1 className="mt-4 text-[36px] font-bold leading-[1.25] text-white sm:text-[48px]">
-                Academics
-              </h1>
-              <p className="mt-6 max-w-lg text-lg leading-[1.67] text-[#a7a7a7]">
-                A rigorous, well-rounded curriculum designed to inspire every
-                learner from K through Grade 12.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Link
-                  href="#programs"
-                  className="rounded-[2px] border-2 border-[#76b900] px-[13px] py-[11px] text-base font-bold text-white transition-colors hover:bg-[#1eaedb] hover:border-[#1eaedb]"
-                >
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Link href="#programs" className="rounded-lg bg-[#C9922A] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#A67820]">
                   Our Programmes
                 </Link>
-                <Link
-                  href="/admissions"
-                  className="rounded-[2px] border border-[#5e5e5e] px-[13px] py-[11px] text-base font-bold text-white transition-colors hover:border-white"
-                >
+                <Link href="/admissions" className="rounded-lg border-2 border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white/50 hover:bg-white/10">
                   Apply Now
                 </Link>
               </div>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2px]">
-              <Image
-                src="/placeholder.jpg"
-                alt="Classroom at Action Academy"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+              <Image src={HERO_IMG} alt="Classroom at Action Academy" fill className="object-cover" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2148]/50 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Curriculum ── light */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            Core Curriculum
-          </p>
-          <h2 className="mt-3 mb-4 text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
-            Broad, balanced, and brilliant
-          </h2>
-          <p className="mb-12 max-w-2xl text-base leading-[1.67] text-[#757575]">
-            Our K-12 curriculum is built on a broad, balanced foundation that
-            develops critical thinking, communication, and the love of learning
-            across all disciplines.
+      {/* ── Curriculum ── cream */}
+      <section className="bg-[#FAF8F4]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Core Curriculum</p>
+          <h2 className="mt-3 text-4xl font-bold text-[#1C1C2E]">Broad, balanced, and brilliant</h2>
+          <div className="mt-4 mb-4 h-1 w-12 rounded bg-[#C9922A]" />
+          <p className="mb-12 max-w-2xl text-base leading-relaxed text-[#6B7280]">
+            Our K-12 curriculum is built on a broad, balanced foundation that develops critical thinking,
+            communication, and the love of learning across all disciplines.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {subjects.map((subject) => (
-              <div
-                key={subject.name}
-                className="rounded-[2px] p-6 shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px]"
-              >
-                <h3 className="border-b-2 border-[#76b900] pb-2 text-[20px] font-bold leading-[1.25] text-black">
-                  {subject.name}
-                </h3>
-                <p className="mt-3 text-sm leading-[1.67] text-[#757575]">
-                  {subject.description}
-                </p>
+              <div key={subject.name} className="rounded-xl border border-[#DDD4C5] bg-white p-6 shadow-[0_2px_16px_rgba(0,0,0,0.05)]">
+                <h3 className="text-lg font-bold text-[#1C1C2E]">{subject.name}</h3>
+                <div className="mt-2 h-0.5 w-8 rounded bg-[#C9922A]" />
+                <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">{subject.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Grade Levels ── dark */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            Curriculum by Grade
-          </p>
-          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
-            Grade-level breakdown
-          </h2>
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="space-y-8">
-              <div className="border-l-4 border-[#76b900] pl-6">
-                <h3 className="text-[20px] font-bold text-white mb-3">Foundation (Pre-K – Grade 1)</h3>
-                <p className="text-sm text-[#a7a7a7] mb-4">
-                  Focus on foundational skills in literacy, numeracy, and social-emotional development through play-based learning.
-                </p>
-                <ul className="space-y-2 text-sm text-[#a7a7a7]">
-                  <li>• Phonics and early reading</li>
-                  <li>• Basic mathematics and problem-solving</li>
-                  <li>• Social skills and emotional intelligence</li>
-                  <li>• Creative arts and physical development</li>
-                </ul>
-              </div>
-              <div className="border-l-4 border-[#76b900] pl-6">
-                <h3 className="text-[20px] font-bold text-white mb-3">Junior School (Grades 2–5)</h3>
-                <p className="text-sm text-[#a7a7a7] mb-4">
-                  Building on foundations with increased academic rigor and introduction to specialized subjects.
-                </p>
-                <ul className="space-y-2 text-sm text-[#a7a7a7]">
-                  <li>• Advanced literacy and comprehension</li>
-                  <li>• Mathematics with real-world applications</li>
-                  <li>• Introduction to science and history</li>
-                  <li>• Foreign language basics</li>
-                  <li>• Technology and digital literacy</li>
-                </ul>
-              </div>
-            </div>
-            <div className="space-y-8">
-              <div className="border-l-4 border-[#76b900] pl-6">
-                <h3 className="text-[20px] font-bold text-white mb-3">Middle School (Grades 6–8)</h3>
-                <p className="text-sm text-[#a7a7a7] mb-4">
-                  Developing critical thinking and independent learning skills with interdisciplinary connections.
-                </p>
-                <ul className="space-y-2 text-sm text-[#a7a7a7]">
-                  <li>• Literature analysis and writing</li>
-                  <li>• Pre-algebra and geometry</li>
-                  <li>• Earth science and biology</li>
-                  <li>• World history and geography</li>
-                  <li>• Coding and computational thinking</li>
-                </ul>
-              </div>
-              <div className="border-l-4 border-[#76b900] pl-6">
-                <h3 className="text-[20px] font-bold text-white mb-3">Senior School (Grades 9–12)</h3>
-                <p className="text-sm text-[#a7a7a7] mb-4">
-                  College-preparatory curriculum with advanced coursework, electives, and leadership development.
-                </p>
-                <ul className="space-y-2 text-sm text-[#a7a7a7]">
-                  <li>• Advanced mathematics and sciences</li>
-                  <li>• Literature, composition, and rhetoric</li>
-                  <li>• Social sciences and research skills</li>
-                  <li>• Multiple foreign languages</li>
-                  <li>• AP/IB courses and electives</li>
-                  <li>• Career and college counseling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Programmes ── dark */}
-      <section id="programs" className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            Special Programmes
-          </p>
-          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
-            Beyond the classroom
-          </h2>
+      {/* ── Programmes ── navy */}
+      <section id="programs" className="bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Special Programmes</p>
+          <h2 className="mt-3 text-4xl font-bold text-white">Beyond the classroom</h2>
+          <div className="mt-4 mb-12 h-1 w-12 rounded bg-[#C9922A]" />
           <div className="grid gap-6 lg:grid-cols-3">
             {programs.map((prog) => (
-              <div
-                key={prog.label}
-                className="group rounded-[2px] border border-[#5e5e5e] bg-[#1a1a1a] overflow-hidden transition-colors hover:border-[#76b900]"
-              >
+              <div key={prog.label} className="group overflow-hidden rounded-xl border border-[#2A3F6A] bg-[#162B52] transition-all hover:border-[#C9922A]">
                 <div className="relative aspect-[16/9] w-full overflow-hidden">
-                  <Image
-                    src={prog.image}
-                    alt={prog.title}
-                    fill
-                    className="object-cover opacity-70 transition-opacity group-hover:opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] to-transparent" />
-                  <p className="absolute top-4 left-4 text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
+                  <Image src={prog.image} alt={prog.title} fill className="object-cover opacity-70 transition-opacity group-hover:opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#162B52] to-transparent" />
+                  <p className="absolute top-4 left-4 rounded-full bg-[#C9922A] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                     {prog.label}
                   </p>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-[20px] font-bold leading-[1.25] text-white">
-                    {prog.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-[1.67] text-[#a7a7a7]">
-                    {prog.description}
-                  </p>
+                  <h3 className="text-xl font-bold text-white">{prog.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[#94A3C8]">{prog.description}</p>
                 </div>
               </div>
             ))}
@@ -250,44 +115,30 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      {/* ── Extracurriculars ── light */}
-      <section id="extracurriculars" className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px]">
-              <Image
-                src="/placeholder.jpg"
-                alt="Extracurricular activities"
-                fill
-                className="object-cover"
-              />
+      {/* ── Extracurriculars ── cream */}
+      <section id="extracurriculars" className="bg-[#FAF8F4]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(14,33,72,0.12)]">
+              <Image src={EXTRA_IMG} alt="Extracurricular activities" fill className="object-cover" />
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-                After School
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">After School</p>
+              <h2 className="mt-3 text-4xl font-bold text-[#1C1C2E]">Extracurricular activities</h2>
+              <div className="mt-4 h-1 w-12 rounded bg-[#C9922A]" />
+              <p className="mt-6 text-base leading-relaxed text-[#6B7280]">
+                We offer a rich selection of clubs, societies, and activities to help students discover
+                their passions outside the classroom. From robotics to debate, chess to community service.
               </p>
-              <h2 className="mt-3 text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
-                Extracurricular activities
-              </h2>
-              <p className="mt-4 text-base leading-[1.67] text-[#757575]">
-                We offer a rich selection of clubs, societies, and activities to
-                help students discover their passions outside the classroom.
-                From robotics to debate, chess to community service — there is
-                something for everyone.
-              </p>
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              <ul className="mt-6 grid grid-cols-2 gap-2">
                 {[
-                  "Robotics & Coding Club",
-                  "Debate Society",
-                  "Student Government",
-                  "School Choir",
-                  "Chess Club",
-                  "Community Service",
-                  "Drama & Theatre",
-                  "School Newsletter",
+                  "Robotics & Coding Club", "Debate Society",
+                  "Student Government", "School Choir",
+                  "Chess Club", "Community Service",
+                  "Drama & Theatre", "School Newsletter",
                 ].map((activity) => (
-                  <li key={activity} className="flex items-center gap-3 text-sm text-[#757575]">
-                    <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#76b900]" />
+                  <li key={activity} className="flex items-center gap-2 text-sm text-[#6B7280]">
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9922A]" />
                     {activity}
                   </li>
                 ))}
@@ -297,25 +148,17 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      {/* ── Student Support ── dark */}
-      <section id="support" className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            We&apos;ve Got You
-          </p>
-          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
-            Student support services
-          </h2>
+      {/* ── Student Support ── navy */}
+      <section id="support" className="bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">We&apos;ve Got You</p>
+          <h2 className="mt-3 text-4xl font-bold text-white">Student support services</h2>
+          <div className="mt-4 mb-12 h-1 w-12 rounded bg-[#C9922A]" />
           <div className="grid gap-4 sm:grid-cols-2">
             {support.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[2px] border border-[#5e5e5e] bg-[#1a1a1a] p-6 transition-colors hover:border-[#76b900]"
-              >
+              <div key={item.title} className="rounded-xl border border-[#2A3F6A] bg-[#162B52] p-6 transition-all hover:border-[#C9922A]">
                 <h3 className="text-base font-bold text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-[1.67] text-[#a7a7a7]">
-                  {item.description}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-[#94A3C8]">{item.description}</p>
               </div>
             ))}
           </div>
