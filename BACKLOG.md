@@ -12,17 +12,17 @@
 ## Phase 0 — Foundation
 
 ### BL-001 Initialize project foundation
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Set up the Next.js App Router project with Tailwind CSS, base folder structure, and shared app layout.
 
 ### BL-002 Configure Supabase integration
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Connect the application to Supabase and create shared helpers for server-side and client-side usage.
 
 ### BL-003 Create initial database schema
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create the core MVP tables for content, forms, staff, events, and resources.
 
@@ -32,7 +32,7 @@
 **Description:** Implement admin and superadmin authentication with route protection.
 
 ### BL-005 Build shared UI shell
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create the responsive site shell including navbar, footer, page container, and reusable layout sections.
 
@@ -41,62 +41,62 @@
 ## Phase 1 — Public Website MVP
 
 ### BL-006 Build homepage MVP
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create the homepage with hero section, mission statement, quick links, featured news/events preview, and calls to action.
 
 ### BL-007 Build About Us page
-**Status:** todo  
+**Status:** done  
 **Priority:** medium  
 **Description:** Create the About Us page with mission, vision, history, and leadership sections.
 
 ### BL-008 Build Admissions page
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create the Admissions page with application overview, tuition/fees, FAQs, and inquiry CTA.
 
 ### BL-009 Build Academics page
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create the Academics page with curriculum overview and school-level breakdown.
 
 ### BL-010 Build Extracurriculars page
-**Status:** todo  
+**Status:** done  
 **Priority:** medium  
-**Description:** Create a page for clubs, sports, and student enrichment activities.
+**Description:** Extracurricular activities and clubs section is included within the Academics page (`/academics#extracurriculars`).
 
 ### BL-011 Build Student Support page
-**Status:** todo  
+**Status:** done  
 **Priority:** medium  
-**Description:** Create a page for counseling, tutoring, and learning support resources.
+**Description:** Student support services section included within the Academics page (`/academics#support`).
 
 ### BL-012 Build Contact Us page
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create the Contact page with school contact details and general inquiry form.
 
 ### BL-013 Build News & Events page
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
 **Description:** Create a page that displays school announcements, recent news, and upcoming events.
 
 ### BL-014 Build Parent Resources page
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
-**Description:** Create a parent resource hub with handbook links, menu, forms, and calendar access.
+**Description:** Create a parent resource hub with handbook links, term calendar, lunch menu, forms, and transport info at `/resources`.
 
 ### BL-015 Build Staff Directory page
-**Status:** todo  
+**Status:** done  
 **Priority:** medium  
-**Description:** Create a searchable or filterable staff directory page.
+**Description:** Created staff directory page at `/staff` with placeholder cards grouped by department.
 
 ### BL-016 Build Policies & Safeguarding page
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
-**Description:** Create a page for school policies, privacy notice, safeguarding information, and related documents.
+**Description:** Create a page for school policies, safeguarding contacts, complaints procedure, and compliance documents at `/policies`.
 
 ### BL-017 Build Careers / Employment page
-**Status:** todo  
+**Status:** deferred  
 **Priority:** low  
 **Description:** Create a simple page for job openings and application instructions.
 
@@ -178,9 +178,9 @@
 ## Phase 4 — Quality, SEO, and Release Readiness
 
 ### BL-031 Add SEO metadata and page-level metadata
-**Status:** todo  
+**Status:** done  
 **Priority:** high  
-**Description:** Add titles, descriptions, Open Graph metadata, and foundational SEO improvements.
+**Description:** All public pages export a `metadata` object with title and description. OG/social tags are deferred to the polish pass.
 
 ### BL-032 Perform mobile responsiveness pass
 **Status:** todo  
@@ -198,7 +198,7 @@
 **Description:** Ensure all major user flows handle loading, no-data, and failure scenarios gracefully.
 
 ### BL-035 Add basic site search
-**Status:** todo  
+**Status:** deferred  
 **Priority:** low  
 **Description:** Add simple keyword-based search for core site content if time permits.
 

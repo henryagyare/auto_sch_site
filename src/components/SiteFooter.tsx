@@ -15,7 +15,7 @@ const footerSections = [
     links: [
       { label: "About Us", href: "/about" },
       { label: "Our Mission", href: "/about#mission" },
-      { label: "Staff Directory", href: "/about#staff" },
+      { label: "Staff Directory", href: "/staff" },
       { label: "Careers", href: "/about#careers" },
     ],
   },
