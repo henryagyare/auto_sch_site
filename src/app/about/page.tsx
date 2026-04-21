@@ -12,12 +12,12 @@ const values = [
   {
     title: "Academic Excellence",
     description:
-      "We hold ourselves to the highest standards, fostering a culture of rigorous inquiry, intellectual curiosity, and continuous improvement.",
+      "We hold ourselves to the highest standards, fostering rigorous inquiry, intellectual curiosity, and a genuine love of learning.",
   },
   {
     title: "Character & Integrity",
     description:
-      "We develop principled, empathetic individuals who lead with honesty, take responsibility, and act with courage in all they do.",
+      "We develop principled, empathetic individuals who lead with honesty, take responsibility, and act with courage.",
   },
   {
     title: "Inclusive Community",
@@ -27,7 +27,7 @@ const values = [
   {
     title: "Innovation & Growth",
     description:
-      "We embrace new ideas and evolving best practices to prepare students for a rapidly changing world.",
+      "We embrace evolving best practices to prepare students for a rapidly changing and interconnected world.",
   },
 ];
 
@@ -55,173 +55,129 @@ const pillars = [
 export default function AboutPage() {
   return (
     <>
-      {/* ── Hero ── dark */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-          <div className="grid min-h-[480px] items-center gap-12 py-20 lg:grid-cols-2">
+      {/* ── Hero ── navy */}
+      <section className="relative overflow-hidden bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid min-h-[520px] items-center gap-12 py-24 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#76b900]">
-                Our Story
-              </p>
-              <h1 className="mt-4 text-[36px] font-bold leading-[1.25] text-white sm:text-[48px]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C9922A]">Our Story</p>
+              <h1 className="mt-3 text-5xl font-bold leading-tight text-white sm:text-6xl">
                 About Action Academy
               </h1>
-              <p className="mt-6 max-w-lg text-lg leading-[1.67] text-[#a7a7a7]">
+              <div className="mt-4 h-1 w-16 rounded bg-[#C9922A]" />
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#94A3C8]">
                 A school built on the conviction that every child deserves an
                 exceptional education in a community that cares.
               </p>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2px]">
-              <Image
-                src="/placeholder.jpg"
-                alt="Action Academy campus"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+              <Image src="/placeholder.jpg" alt="Action Academy campus" fill className="object-cover" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2148]/50 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Mission ── light */}
-      <section id="mission" className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+      {/* ── Mission ── cream */}
+      <section id="mission" className="bg-[#FAF8F4]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-                Purpose
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Purpose</p>
+              <h2 className="mt-3 text-4xl font-bold leading-snug text-[#1C1C2E]">Our Mission</h2>
+              <div className="mt-4 h-1 w-12 rounded bg-[#C9922A]" />
+              <p className="mt-6 text-base leading-relaxed text-[#6B7280]">
+                We are committed to academic excellence, character growth, and a welcoming school
+                community. Through world-class teaching and a rich co-curricular programme, we
+                equip every student with the knowledge, skills, and values to make a positive
+                difference in the world.
               </p>
-              <h2 className="mt-3 text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
-                Our Mission
-              </h2>
-              <p className="mt-4 text-base leading-[1.67] text-[#757575]">
-                We are committed to academic excellence, character growth, and a
-                welcoming school community. Through world-class teaching and a
-                rich co-curricular programme, we equip every student with the
-                knowledge, skills, and values to make a positive difference.
-              </p>
-              <p className="mt-4 text-base leading-[1.67] text-[#757575]">
-                Our vision is to be a leading centre of K-12 education — one
-                where every learner is known by name and empowered to reach
-                their full potential.
+              <p className="mt-4 text-base leading-relaxed text-[#6B7280]">
+                Our vision is to be a leading centre of K-12 education — one where every learner
+                is known by name and empowered to reach their full potential.
               </p>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px]">
-              <Image
-                src="/placeholder.jpg"
-                alt="Students in classroom"
-                fill
-                className="object-cover"
-              />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(14,33,72,0.12)]">
+              <Image src="/placeholder.jpg" alt="Students in classroom" fill className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Values ── dark */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            What We Stand For
-          </p>
-          <h2 className="mt-3 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
-            Our core values
-          </h2>
-          <p className="mt-4 mb-12 max-w-2xl text-base leading-[1.67] text-[#a7a7a7]">
-            These principles guide every decision we make — from curriculum
-            design to how we treat one another in the hallways.
-          </p>
+      {/* ── Values ── navy */}
+      <section className="bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">What We Stand For</p>
+          <h2 className="mt-3 text-4xl font-bold text-white">Our core values</h2>
+          <div className="mt-4 mb-12 h-1 w-12 rounded bg-[#C9922A]" />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => (
               <div
                 key={value.title}
-                className="rounded-[2px] border border-[#5e5e5e] bg-[#1a1a1a] p-6 transition-colors hover:border-[#76b900]"
+                className="rounded-xl border border-[#2A3F6A] bg-[#162B52] p-6 transition-all hover:border-[#C9922A] hover:shadow-[0_4px_20px_rgba(201,146,42,0.12)]"
               >
                 <h3 className="text-base font-bold text-white">{value.title}</h3>
-                <p className="mt-3 text-sm leading-[1.67] text-[#a7a7a7]">
-                  {value.description}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-[#94A3C8]">{value.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Our Approach ── light */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            How We Teach
-          </p>
-          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
-            Our approach to education
-          </h2>
+      {/* ── Approach ── cream */}
+      <section className="bg-[#FAF8F4]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">How We Teach</p>
+          <h2 className="mt-3 text-4xl font-bold text-[#1C1C2E]">Our approach to education</h2>
+          <div className="mt-4 mb-12 h-1 w-12 rounded bg-[#C9922A]" />
           <div className="grid gap-8 lg:grid-cols-3">
             {pillars.map((pillar) => (
-              <div key={pillar.label} className="border-t-2 border-[#76b900] pt-6">
-                <p className="text-xs font-bold text-[#76b900]">{pillar.label}</p>
-                <h3 className="mt-2 text-[20px] font-bold leading-[1.25] text-black">
-                  {pillar.title}
-                </h3>
-                <p className="mt-3 text-sm leading-[1.67] text-[#757575]">
-                  {pillar.description}
-                </p>
+              <div key={pillar.label} className="rounded-xl border border-[#DDD4C5] bg-white p-8 shadow-[0_2px_16px_rgba(0,0,0,0.05)]">
+                <p className="text-xs font-bold tracking-wider text-[#C9922A]">{pillar.label}</p>
+                <h3 className="mt-3 text-xl font-bold text-[#1C1C2E]">{pillar.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">{pillar.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Staff preview ── dark */}
-      <section id="staff" className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      {/* ── Staff preview ── navy */}
+      <section id="staff" className="bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-                Our People
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Our People</p>
+              <h2 className="mt-3 text-4xl font-bold text-white">Meet our dedicated team</h2>
+              <div className="mt-4 h-1 w-12 rounded bg-[#C9922A]" />
+              <p className="mt-6 text-base leading-relaxed text-[#94A3C8]">
+                Our faculty and staff bring expertise, passion, and genuine care to their work.
+                They are the heart of everything Action Academy stands for.
               </p>
-              <h2 className="mt-3 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
-                Meet our dedicated team
-              </h2>
-              <p className="mt-4 text-base leading-[1.67] text-[#a7a7a7]">
-                Our faculty and staff bring expertise, passion, and genuine care
-                to their work. They are the heart of everything Action Academy
-                stands for.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="rounded-[2px] border-2 border-[#76b900] px-[13px] py-[11px] text-base font-bold text-white transition-colors hover:bg-[#1eaedb] hover:border-[#1eaedb]"
-                >
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/staff" className="rounded-lg bg-[#C9922A] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#A67820]">
+                  View Staff Directory
+                </Link>
+                <Link href="/contact" className="rounded-lg border-2 border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white/50 hover:bg-white/10">
                   Get in Touch
                 </Link>
               </div>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               {[
                 { name: "Principal", role: "Academic Leadership" },
                 { name: "Head of Curriculum", role: "Teaching & Learning" },
                 { name: "Student Support", role: "Wellbeing & Guidance" },
                 { name: "Admissions Office", role: "Enrolment & Welcome" },
               ].map((person) => (
-                <div
-                  key={person.name}
-                  className="relative overflow-hidden rounded-[2px] bg-[#1a1a1a]"
-                >
+                <div key={person.name} className="relative overflow-hidden rounded-xl">
                   <div className="relative aspect-square w-full">
-                    <Image
-                      src="/placeholder.jpg"
-                      alt={person.name}
-                      fill
-                      className="object-cover opacity-70"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <Image src="/placeholder.jpg" alt={person.name} fill className="object-cover opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0E2148]/90 to-transparent" />
                   </div>
                   <div className="absolute bottom-0 left-0 p-4">
                     <p className="text-sm font-bold text-white">{person.name}</p>
-                    <p className="text-xs text-[#a7a7a7]">{person.role}</p>
+                    <p className="text-xs text-[#C9922A]">{person.role}</p>
                   </div>
                 </div>
               ))}
@@ -230,30 +186,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CTA ── light */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="border-l-4 border-[#76b900] pl-8">
-            <h2 className="text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
-              Ready to learn more?
-            </h2>
-            <p className="mt-4 max-w-xl text-base leading-[1.67] text-[#757575]">
-              We&apos;d love to welcome you to our school. Contact our team or
-              start your admissions journey today.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/admissions"
-                className="rounded-[2px] border-2 border-[#76b900] px-[13px] py-[11px] text-base font-bold text-black transition-colors hover:bg-[#1eaedb] hover:border-[#1eaedb] hover:text-white"
-              >
-                Admissions
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-[2px] border border-black px-[13px] py-[11px] text-base font-bold text-black transition-colors hover:bg-black hover:text-white"
-              >
-                Contact Us
-              </Link>
+      {/* ── CTA ── cream */}
+      <section className="bg-[#FAF8F4]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="rounded-2xl bg-white p-10 shadow-[0_4px_32px_rgba(14,33,72,0.08)]">
+            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1C1C2E]">Ready to learn more?</h2>
+                <p className="mt-2 max-w-lg text-base text-[#6B7280]">
+                  We&apos;d love to welcome you to our school. Start your admissions journey today.
+                </p>
+              </div>
+              <div className="flex shrink-0 flex-wrap gap-3">
+                <Link href="/admissions" className="rounded-lg bg-[#C9922A] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#A67820]">
+                  Admissions
+                </Link>
+                <Link href="/contact" className="rounded-lg border-2 border-[#DDD4C5] px-6 py-3 text-sm font-semibold text-[#1C1C2E] transition-colors hover:border-[#C9922A] hover:text-[#C9922A]">
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
         </div>

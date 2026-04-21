@@ -19,120 +19,69 @@ export default async function ContactPage() {
   const email = settings?.contact_email ?? "info@actionacademy.edu";
   const phone = settings?.contact_phone ?? "+1 (555) 000-0000";
 
+  const inputClass =
+    "w-full rounded-lg border border-[#DDD4C5] bg-white px-4 py-3 text-sm text-[#1C1C2E] placeholder-[#9CA3AF] transition-colors focus:border-[#C9922A] focus:outline-none focus:ring-2 focus:ring-[#C9922A]/20";
+
   return (
     <>
-      {/* ── Hero ── dark */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-          <div className="grid min-h-[380px] items-center gap-12 py-20 lg:grid-cols-2">
+      {/* ── Hero ── navy */}
+      <section className="relative overflow-hidden bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid min-h-[440px] items-center gap-12 py-24 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#76b900]">
-                We&apos;re Here
-              </p>
-              <h1 className="mt-4 text-[36px] font-bold leading-[1.25] text-white sm:text-[48px]">
-                Contact Us
-              </h1>
-              <p className="mt-6 max-w-lg text-lg leading-[1.67] text-[#a7a7a7]">
-                Whether you have a question about admissions, academics, or
-                general school matters — we&apos;d love to hear from you.
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C9922A]">We&apos;re Here</p>
+              <h1 className="mt-3 text-5xl font-bold leading-tight text-white sm:text-6xl">Contact Us</h1>
+              <div className="mt-4 h-1 w-16 rounded bg-[#C9922A]" />
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#94A3C8]">
+                Whether you have a question about admissions, academics, or general school matters —
+                we&apos;d love to hear from you.
               </p>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2px]">
-              <Image
-                src="/placeholder.jpg"
-                alt="Action Academy front office"
-                fill
-                className="object-cover opacity-70"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+              <Image src="/placeholder.jpg" alt="Action Academy front office" fill className="object-cover opacity-70" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2148]/60 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Contact Form + Info ── light */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-[1fr_400px]">
+      {/* ── Form + Info ── cream */}
+      <section className="bg-[#FAF8F4]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="grid gap-16 lg:grid-cols-[1fr_380px]">
             {/* Form */}
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-                Send a Message
-              </p>
-              <h2 className="mt-3 mb-8 text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
-                General enquiry
-              </h2>
-              <form className="space-y-6" noValidate>
-                <div className="grid gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl border border-[#DDD4C5] bg-white p-8 shadow-[0_4px_32px_rgba(14,33,72,0.07)] sm:p-10">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Send a Message</p>
+              <h2 className="mt-2 text-3xl font-bold text-[#1C1C2E]">General enquiry</h2>
+              <div className="mt-3 mb-8 h-1 w-10 rounded bg-[#C9922A]" />
+              <form className="space-y-5" noValidate>
+                <div className="grid gap-5 sm:grid-cols-2">
                   <div>
-                    <label
-                      htmlFor="full_name"
-                      className="mb-2 block text-sm font-bold uppercase tracking-[0.08em] text-black"
-                    >
+                    <label htmlFor="full_name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
                       Full Name
                     </label>
-                    <input
-                      id="full_name"
-                      name="full_name"
-                      type="text"
-                      autoComplete="name"
-                      required
-                      className="w-full rounded-[2px] border border-[#5e5e5e] bg-white px-4 py-3 text-sm text-black placeholder-[#a7a7a7] transition-colors focus:border-[#76b900] focus:outline-none"
-                      placeholder="Jane Smith"
-                    />
+                    <input id="full_name" name="full_name" type="text" autoComplete="name" required className={inputClass} placeholder="Jane Smith" />
                   </div>
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="mb-2 block text-sm font-bold uppercase tracking-[0.08em] text-black"
-                    >
+                    <label htmlFor="email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
                       Email Address
                     </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      required
-                      className="w-full rounded-[2px] border border-[#5e5e5e] bg-white px-4 py-3 text-sm text-black placeholder-[#a7a7a7] transition-colors focus:border-[#76b900] focus:outline-none"
-                      placeholder="jane@example.com"
-                    />
+                    <input id="email" name="email" type="email" autoComplete="email" required className={inputClass} placeholder="jane@example.com" />
                   </div>
                 </div>
 
-                <div className="grid gap-6 sm:grid-cols-2">
+                <div className="grid gap-5 sm:grid-cols-2">
                   <div>
-                    <label
-                      htmlFor="phone"
-                      className="mb-2 block text-sm font-bold uppercase tracking-[0.08em] text-black"
-                    >
-                      Phone{" "}
-                      <span className="text-xs font-normal normal-case text-[#a7a7a7]">
-                        (optional)
-                      </span>
+                    <label htmlFor="phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
+                      Phone <span className="font-normal normal-case text-[#9CA3AF]">(optional)</span>
                     </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      autoComplete="tel"
-                      className="w-full rounded-[2px] border border-[#5e5e5e] bg-white px-4 py-3 text-sm text-black placeholder-[#a7a7a7] transition-colors focus:border-[#76b900] focus:outline-none"
-                      placeholder="+1 555 000 0000"
-                    />
+                    <input id="phone" name="phone" type="tel" autoComplete="tel" className={inputClass} placeholder="+1 555 000 0000" />
                   </div>
                   <div>
-                    <label
-                      htmlFor="subject"
-                      className="mb-2 block text-sm font-bold uppercase tracking-[0.08em] text-black"
-                    >
+                    <label htmlFor="subject" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
                       Subject
                     </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      className="w-full rounded-[2px] border border-[#5e5e5e] bg-white px-4 py-3 text-sm text-black transition-colors focus:border-[#76b900] focus:outline-none"
-                    >
+                    <select id="subject" name="subject" className={inputClass}>
                       <option value="">Select a subject</option>
                       <option value="admissions">Admissions Enquiry</option>
                       <option value="academics">Academic Information</option>
@@ -144,25 +93,15 @@ export default async function ContactPage() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm font-bold uppercase tracking-[0.08em] text-black"
-                  >
+                  <label htmlFor="message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
                     Message
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    className="w-full rounded-[2px] border border-[#5e5e5e] bg-white px-4 py-3 text-sm text-black placeholder-[#a7a7a7] transition-colors focus:border-[#76b900] focus:outline-none"
-                    placeholder="Tell us how we can help..."
-                  />
+                  <textarea id="message" name="message" rows={5} required className={inputClass} placeholder="Tell us how we can help..." />
                 </div>
 
                 <button
                   type="submit"
-                  className="rounded-[2px] border-2 border-[#76b900] px-[13px] py-[11px] text-base font-bold text-black transition-colors hover:bg-[#1eaedb] hover:border-[#1eaedb] hover:text-white active:bg-[#007fff]"
+                  className="w-full rounded-lg bg-[#C9922A] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#A67820] sm:w-auto"
                 >
                   Send Message
                 </button>
@@ -170,65 +109,36 @@ export default async function ContactPage() {
             </div>
 
             {/* Contact Info */}
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-                Find Us
-              </p>
-              <h2 className="mt-3 mb-8 text-[24px] font-bold leading-[1.25] text-black">
-                Get in touch
-              </h2>
-
-              <div className="space-y-6">
-                <div className="border-l-2 border-[#76b900] pl-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#757575]">
-                    Address
-                  </p>
-                  <p className="mt-1 text-sm leading-[1.67] text-black">{address}</p>
-                </div>
-                <div className="border-l-2 border-[#76b900] pl-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#757575]">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${email}`}
-                    className="mt-1 block text-sm text-black underline decoration-[#76b900] decoration-2 underline-offset-4 transition-colors hover:text-[#3860be]"
-                  >
-                    {email}
-                  </a>
-                </div>
-                <div className="border-l-2 border-[#76b900] pl-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#757575]">
-                    Phone
-                  </p>
-                  <a
-                    href={`tel:${phone}`}
-                    className="mt-1 block text-sm text-black underline decoration-[#76b900] decoration-2 underline-offset-4 transition-colors hover:text-[#3860be]"
-                  >
-                    {phone}
-                  </a>
-                </div>
-                <div className="border-l-2 border-[#76b900] pl-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#757575]">
-                    Office Hours
-                  </p>
-                  <p className="mt-1 text-sm leading-[1.67] text-black">
-                    Monday – Friday
-                    <br />
-                    7:30 AM – 4:30 PM
-                  </p>
-                </div>
+            <div className="space-y-6">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Find Us</p>
+                <h2 className="mt-2 text-3xl font-bold text-[#1C1C2E]">Get in touch</h2>
+                <div className="mt-3 h-1 w-10 rounded bg-[#C9922A]" />
               </div>
 
+              {[
+                { label: "Address", value: address, href: undefined },
+                { label: "Email", value: email, href: `mailto:${email}` },
+                { label: "Phone", value: phone, href: `tel:${phone}` },
+                { label: "Office Hours", value: "Mon – Fri · 7:30 AM – 4:30 PM", href: undefined },
+              ].map((item) => (
+                <div key={item.label} className="rounded-xl border border-[#DDD4C5] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#C9922A]">{item.label}</p>
+                  {item.href ? (
+                    <a href={item.href} className="mt-1 block text-sm font-medium text-[#1C1C2E] transition-colors hover:text-[#C9922A]">
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="mt-1 text-sm text-[#1C1C2E]">{item.value}</p>
+                  )}
+                </div>
+              ))}
+
               {/* Map placeholder */}
-              <div className="mt-8 relative aspect-square w-full overflow-hidden rounded-[2px] bg-[#f5f5f5] shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px]">
-                <Image
-                  src="/placeholder.jpg"
-                  alt="School location map"
-                  fill
-                  className="object-cover opacity-60"
-                />
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-[#F3EDE3] shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+                <Image src="/placeholder.jpg" alt="School location map" fill className="object-cover opacity-50" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="rounded-[2px] bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] text-white">
+                  <p className="rounded-lg bg-[#0E2148]/80 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm">
                     View on Map
                   </p>
                 </div>
@@ -238,57 +148,27 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      {/* ── Departments ── dark */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
-            Departments
-          </p>
-          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
-            Direct contacts
-          </h2>
+      {/* ── Departments ── navy */}
+      <section className="bg-[#0E2148]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Departments</p>
+          <h2 className="mt-3 text-4xl font-bold text-white">Direct contacts</h2>
+          <div className="mt-4 mb-12 h-1 w-12 rounded bg-[#C9922A]" />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              {
-                dept: "Admissions Office",
-                desc: "Applications, school tours, and intake queries.",
-                contact: "admissions",
-              },
-              {
-                dept: "Academic Affairs",
-                desc: "Curriculum, timetables, and academic concerns.",
-                contact: "academics",
-              },
-              {
-                dept: "Finance Office",
-                desc: "Tuition, fees, and payment enquiries.",
-                contact: "finance",
-              },
-              {
-                dept: "Student Support",
-                desc: "Counselling, welfare, and learning support.",
-                contact: "support",
-              },
-              {
-                dept: "Sports & Activities",
-                desc: "Sports teams, clubs, and extracurriculars.",
-                contact: "sports",
-              },
-              {
-                dept: "IT Help Desk",
-                desc: "Student portal, device, and tech support.",
-                contact: "it",
-              },
+              { dept: "Admissions Office", desc: "Applications, school tours, and intake queries.", contact: "admissions" },
+              { dept: "Academic Affairs", desc: "Curriculum, timetables, and academic concerns.", contact: "academics" },
+              { dept: "Finance Office", desc: "Tuition, fees, and payment enquiries.", contact: "finance" },
+              { dept: "Student Support", desc: "Counselling, welfare, and learning support.", contact: "support" },
+              { dept: "Sports & Activities", desc: "Sports teams, clubs, and extracurriculars.", contact: "sports" },
+              { dept: "IT Help Desk", desc: "Student portal, device, and tech support.", contact: "it" },
             ].map((dept) => (
-              <div
-                key={dept.dept}
-                className="rounded-[2px] border border-[#5e5e5e] bg-[#1a1a1a] p-6 transition-colors hover:border-[#76b900]"
-              >
+              <div key={dept.dept} className="rounded-xl border border-[#2A3F6A] bg-[#162B52] p-6 transition-all hover:border-[#C9922A]">
                 <h3 className="text-base font-bold text-white">{dept.dept}</h3>
-                <p className="mt-2 text-sm leading-[1.67] text-[#a7a7a7]">{dept.desc}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#94A3C8]">{dept.desc}</p>
                 <a
                   href={`mailto:${dept.contact}@actionacademy.edu`}
-                  className="mt-3 block text-xs font-bold text-[#76b900] transition-colors hover:text-[#3860be]"
+                  className="mt-3 block text-xs font-semibold text-[#C9922A] transition-colors hover:text-[#F5E6CC]"
                 >
                   {dept.contact}@actionacademy.edu
                 </a>
