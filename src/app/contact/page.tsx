@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
+import ContactForm from "@/components/ContactForm";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80";
 const MAP_IMG = "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80";
@@ -21,9 +22,6 @@ export default async function ContactPage() {
   const address = settings?.address ?? "123 Academy Drive, Education City";
   const email = settings?.contact_email ?? "info@actionacademy.edu";
   const phone = settings?.contact_phone ?? "+1 (555) 000-0000";
-
-  const inputClass =
-    "w-full rounded-lg border border-[#DDD4C5] bg-white px-4 py-3 text-sm text-[#1C1C2E] placeholder-[#9CA3AF] transition-colors focus:border-[#C9922A] focus:outline-none focus:ring-2 focus:ring-[#C9922A]/20";
 
   return (
     <>
@@ -53,63 +51,7 @@ export default async function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-[1fr_380px]">
             {/* Form */}
-            <div className="rounded-2xl border border-[#DDD4C5] bg-white p-8 shadow-[0_4px_32px_rgba(14,33,72,0.07)] sm:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9922A]">Send a Message</p>
-              <h2 className="mt-2 text-3xl font-bold text-[#1C1C2E]">General enquiry</h2>
-              <div className="mt-3 mb-8 h-1 w-10 rounded bg-[#C9922A]" />
-              <form className="space-y-5" noValidate>
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="full_name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
-                      Full Name
-                    </label>
-                    <input id="full_name" name="full_name" type="text" autoComplete="name" required className={inputClass} placeholder="Jane Smith" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
-                      Email Address
-                    </label>
-                    <input id="email" name="email" type="email" autoComplete="email" required className={inputClass} placeholder="jane@example.com" />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="phone" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
-                      Phone <span className="font-normal normal-case text-[#9CA3AF]">(optional)</span>
-                    </label>
-                    <input id="phone" name="phone" type="tel" autoComplete="tel" className={inputClass} placeholder="+1 555 000 0000" />
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
-                      Subject
-                    </label>
-                    <select id="subject" name="subject" className={inputClass}>
-                      <option value="">Select a subject</option>
-                      <option value="admissions">Admissions Enquiry</option>
-                      <option value="academics">Academic Information</option>
-                      <option value="events">Events & Activities</option>
-                      <option value="fees">Tuition & Fees</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
-                    Message
-                  </label>
-                  <textarea id="message" name="message" rows={5} required className={inputClass} placeholder="Tell us how we can help..." />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full rounded-lg bg-[#C9922A] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#A67820] sm:w-auto"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+            <ContactForm />
 
             {/* Contact Info */}
             <div className="space-y-6">
