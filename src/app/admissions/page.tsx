@@ -197,6 +197,61 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
+      {/* ── Tuition and Fees ── light */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
+            Financial Information
+          </p>
+          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-black sm:text-[36px]">
+            Tuition and fees
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-[20px] font-bold text-black mb-4">Annual Tuition Fees</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="text-sm text-[#757575]">Foundation (Pre-K – Grade 1)</span>
+                  <span className="font-bold text-black">$12,000</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="text-sm text-[#757575]">Junior School (Grades 2–5)</span>
+                  <span className="font-bold text-black">$14,000</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="text-sm text-[#757575]">Middle School (Grades 6–8)</span>
+                  <span className="font-bold text-black">$16,000</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-sm text-[#757575]">Senior School (Grades 9–12)</span>
+                  <span className="font-bold text-black">$18,000</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-[20px] font-bold text-black mb-4">Additional Fees</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-[#757575]">Application Fee (non-refundable)</span>
+                  <span className="font-bold text-black">$200</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-[#757575]">Enrollment Fee (one-time)</span>
+                  <span className="font-bold text-black">$500</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-[#757575]">Activity Fee (annual)</span>
+                  <span className="font-bold text-black">$800</span>
+                </div>
+              </div>
+              <p className="mt-6 text-sm text-[#757575]">
+                Fees are subject to annual review. Payment plans and financial aid may be available. Contact our admissions office for the most current information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Documents ── dark */}
       <section id="fees" className="bg-black">
         <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
@@ -236,6 +291,60 @@ export default function AdmissionsPage() {
                 className="object-cover opacity-70"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-black/40 to-transparent" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── dark */}
+      <section className="bg-black">
+        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
+            Common Questions
+          </p>
+          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
+            Frequently asked questions
+          </h2>
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="space-y-6">
+              <div className="border-b border-[#5e5e5e] pb-6">
+                <h3 className="text-[18px] font-bold text-white mb-3">When should I apply?</h3>
+                <p className="text-sm text-[#a7a7a7] leading-[1.67]">
+                  We accept applications year-round, but spaces fill quickly. We recommend applying at least 6-12 months before your desired start date, especially for popular grade levels.
+                </p>
+              </div>
+              <div className="border-b border-[#5e5e5e] pb-6">
+                <h3 className="text-[18px] font-bold text-white mb-3">Do you offer financial aid?</h3>
+                <p className="text-sm text-[#a7a7a7] leading-[1.67]">
+                  Yes, we offer need-based financial aid and scholarships. Applications for financial aid are reviewed on a case-by-case basis. Contact our admissions office to discuss options.
+                </p>
+              </div>
+              <div className="border-b border-[#5e5e5e] pb-6">
+                <h3 className="text-[18px] font-bold text-white mb-3">What is the student-teacher ratio?</h3>
+                <p className="text-sm text-[#a7a7a7] leading-[1.67]">
+                  Our average student-teacher ratio is 12:1, allowing for personalized attention and support for each student&apos;s learning needs and development.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="border-b border-[#5e5e5e] pb-6">
+                <h3 className="text-[18px] font-bold text-white mb-3">Are there entrance exams?</h3>
+                <p className="text-sm text-[#a7a7a7] leading-[1.67]">
+                  For most grade levels, we use a combination of previous school records, teacher recommendations, and informal assessments. Formal entrance exams are only required for senior school applicants.
+                </p>
+              </div>
+              <div className="border-b border-[#5e5e5e] pb-6">
+                <h3 className="text-[18px] font-bold text-white mb-3">Do you accept international students?</h3>
+                <p className="text-sm text-[#a7a7a7] leading-[1.67]">
+                  Yes, we welcome international students. Additional requirements may include English proficiency testing and visa documentation support.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-[18px] font-bold text-white mb-3">What extracurricular activities are offered?</h3>
+                <p className="text-sm text-[#a7a7a7] leading-[1.67]">
+                  We offer a wide range of activities including sports teams, arts programs, clubs, and community service opportunities. All students are encouraged to participate in at least one activity.
+                </p>
+              </div>
             </div>
           </div>
         </div>
