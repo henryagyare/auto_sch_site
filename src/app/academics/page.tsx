@@ -139,6 +139,76 @@ export default function AcademicsPage() {
         </div>
       </section>
 
+      {/* ── Grade Levels ── dark */}
+      <section className="bg-black">
+        <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#76b900]">
+            Curriculum by Grade
+          </p>
+          <h2 className="mt-3 mb-12 text-[24px] font-bold leading-[1.25] text-white sm:text-[36px]">
+            Grade-level breakdown
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="space-y-8">
+              <div className="border-l-4 border-[#76b900] pl-6">
+                <h3 className="text-[20px] font-bold text-white mb-3">Foundation (Pre-K – Grade 1)</h3>
+                <p className="text-sm text-[#a7a7a7] mb-4">
+                  Focus on foundational skills in literacy, numeracy, and social-emotional development through play-based learning.
+                </p>
+                <ul className="space-y-2 text-sm text-[#a7a7a7]">
+                  <li>• Phonics and early reading</li>
+                  <li>• Basic mathematics and problem-solving</li>
+                  <li>• Social skills and emotional intelligence</li>
+                  <li>• Creative arts and physical development</li>
+                </ul>
+              </div>
+              <div className="border-l-4 border-[#76b900] pl-6">
+                <h3 className="text-[20px] font-bold text-white mb-3">Junior School (Grades 2–5)</h3>
+                <p className="text-sm text-[#a7a7a7] mb-4">
+                  Building on foundations with increased academic rigor and introduction to specialized subjects.
+                </p>
+                <ul className="space-y-2 text-sm text-[#a7a7a7]">
+                  <li>• Advanced literacy and comprehension</li>
+                  <li>• Mathematics with real-world applications</li>
+                  <li>• Introduction to science and history</li>
+                  <li>• Foreign language basics</li>
+                  <li>• Technology and digital literacy</li>
+                </ul>
+              </div>
+            </div>
+            <div className="space-y-8">
+              <div className="border-l-4 border-[#76b900] pl-6">
+                <h3 className="text-[20px] font-bold text-white mb-3">Middle School (Grades 6–8)</h3>
+                <p className="text-sm text-[#a7a7a7] mb-4">
+                  Developing critical thinking and independent learning skills with interdisciplinary connections.
+                </p>
+                <ul className="space-y-2 text-sm text-[#a7a7a7]">
+                  <li>• Literature analysis and writing</li>
+                  <li>• Pre-algebra and geometry</li>
+                  <li>• Earth science and biology</li>
+                  <li>• World history and geography</li>
+                  <li>• Coding and computational thinking</li>
+                </ul>
+              </div>
+              <div className="border-l-4 border-[#76b900] pl-6">
+                <h3 className="text-[20px] font-bold text-white mb-3">Senior School (Grades 9–12)</h3>
+                <p className="text-sm text-[#a7a7a7] mb-4">
+                  College-preparatory curriculum with advanced coursework, electives, and leadership development.
+                </p>
+                <ul className="space-y-2 text-sm text-[#a7a7a7]">
+                  <li>• Advanced mathematics and sciences</li>
+                  <li>• Literature, composition, and rhetoric</li>
+                  <li>• Social sciences and research skills</li>
+                  <li>• Multiple foreign languages</li>
+                  <li>• AP/IB courses and electives</li>
+                  <li>• Career and college counseling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Programmes ── dark */}
       <section id="programs" className="bg-black">
         <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
